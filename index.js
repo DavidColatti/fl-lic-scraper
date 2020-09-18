@@ -46,10 +46,10 @@ const scrapeLic = async (id, page) => {
       data.personal_name = `${found.Last}, ${found.First}`;
       data.address = `${found.Address}, ${found["City & Zip"]}`;
       data.url = page.url();
-
-      console.log(`${id} successfully scraped the data`);
-      return data;
     }
+
+    console.log(`${id} successfully scraped the data`);
+    return data;
   } catch (e) {
     console.log(`${id} failed at scraping the details`);
   }
